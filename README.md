@@ -55,6 +55,12 @@ This C++ program implements a spell checker using a hash map. The program loads 
 
 The `Node` class is used to represent each element in the singly linked list. It contains a word and a pointer to the next node.
 
+### Node Class Methods
+
+- **Node()**: Default constructor that initializes an empty node.
+- **Node(string word)**: Constructor that initializes a node with a given word.
+- **printNode()**: Prints the word stored in the node.
+
 ## SLL Class and Methods
 
 The `SLL` class represents a singly linked list. It includes the following methods:
@@ -66,12 +72,27 @@ The `SLL` class represents a singly linked list. It includes the following metho
 - **levenshteinRecursive**: Calculates the Levenshtein distance between two words.
 - **checkBucket**: Checks for similar words in the list.
 
-## HashMap Methods
+## HashMap Class and Methods
 
-- **documentFileForUser**: Analyzes a file and suggests corrections for misspelled words.
-- **spellChecker**: Finds the closest word matches for a given word.
-- **removeWord**: Deletes a word from the hash map.
-- **saveDictionary**: Saves the updated dictionary to a file.
+The `hashMap` class represents a hash map. It includes the following methods:
+- **hashMap()**: Constructor that initializes an empty hash map.
+- **~hashMap()**: Destructor that cleans up the hash map.
+- **addKeyValue(string word)**: Adds a word to the hash map.
+- **contains(string word)**: Checks if a word is in the hash map.
+- **calcHash(string word)**: Calculates the hash value of a word.
+- **printMap()**: Prints the entire hash map.
+- **removeWord(string word)**: Removes a word from the hash map.
+- **documentFileForUser()**: Analyzes a file and suggests corrections for misspelled words.
+- **saveDictionary()**: Saves the updated dictionary to a file.
+- **spellChecker(string word)**: Finds the closest word matches for a given word.
+
+## 5000_Dictionary.txt
+
+The `5000_Dictionary.txt` file contains a list of words used by the spell checker. It is loaded into the hash map at the start of the program.
+
+## Spell Checker Algorithm
+
+The spell checker algorithm uses the Levenshtein distance to find the closest word matches for a given word. It iterates through the hash map and checks each bucket for similar words. If a word is not found in the dictionary, the algorithm suggests possible corrections.
 
 ## License
 
