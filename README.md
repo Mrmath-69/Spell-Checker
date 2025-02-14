@@ -51,6 +51,28 @@ This C++ program implements a spell checker using a hash map. The program loads 
 - **Singly Linked List (SLL)**: Each hash bucket is implemented using a linked list for handling collisions.
 - **Levenshtein Distance Algorithm**: Used for spell-checking by finding the closest word matches.
 
+## Node Class
+
+The `Node` class is used to represent each element in the singly linked list. It contains a word and a pointer to the next node.
+
+## SLL Class and Methods
+
+The `SLL` class represents a singly linked list. It includes the following methods:
+- **push**: Adds a word to the list.
+- **remove**: Removes a word from the list.
+- **contains**: Checks if a word is in the list.
+- **printList**: Prints all words in the list.
+- **saveToFile**: Saves the list to a file.
+- **levenshteinRecursive**: Calculates the Levenshtein distance between two words.
+- **checkBucket**: Checks for similar words in the list.
+
+## HashMap Methods
+
+- **documentFileForUser**: Analyzes a file and suggests corrections for misspelled words.
+- **spellChecker**: Finds the closest word matches for a given word.
+- **removeWord**: Deletes a word from the hash map.
+- **saveDictionary**: Saves the updated dictionary to a file.
+
 ## License
 
 This project is open-source and available for modification and distribution.
