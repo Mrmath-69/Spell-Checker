@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
 	hashMap map1;
-	ifstream inputFile("/Users/mrmath69/Downloads/HashMapProject_Student/5000_Dictionary.txt");
+	ifstream inputFile("path/to/5000_Dictionary.txt");
 	string line;
 	while (getline(inputFile, line)) {
 		if(map1.contains(line)) {
